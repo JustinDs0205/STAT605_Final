@@ -1,0 +1,73 @@
+---
+title: "STAT605_final_proposal_Group2"
+author: "Zhengda Liu"
+date: "2024-10-31"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Dataset Introduction
+
+- NYC Real-Time Traffic Speed Data
+
+- 24GB dataset on Kaggle
+https://www.kaggle.com/datasets/aadimator/nyc-realtime-traffic-speed-data
+
+- Contains ‘real-time’ traffic information, including average speed, travel time and location of speed detectors
+
+## Questions
+#### Question0: Exploratory Data Analysis: deep in the dataset
+
+#### Question1: How to quantize the over-speed feature?
+
+#### Question2: Which streets in New York have a higher rate of vehicles over speed?
+
+## Data Description
+
+- 64 million samples and 13 variables in this dataset
+
+- Care about “id” “speed” “link_id” “borough” “link_name” variables
+"borough" represents the name of the New York district, including Brooklyn, Bronx, Manhattan, 
+
+- Queens and Staten Island
+
+- "link_name" represents the names of the streets
+
+## Data Split: Divide dataset by “LINK_ID” into 160 small dataset
+
+```{r,eval = FALSE}
+mydata = read.csv("DOT_Traffic_Speeds_NBE.csv", header = TRUE)
+linkid = unique(mydata$LINK_ID)
+for(i in linkid){
+  newdata = mydata[mydata$LINK_ID==i, ]
+  write.csv(newdata, paste("linkid_", as.character(i), ".csv", sep=""), row.names=FALSE)
+}
+```
+
+```{r}
+mydata = read.csv("linkid_4329472.csv", header = TRUE)
+mydata_head=mydata[1:5,c(1,2,6,12,13)]
+head(mydata_head)
+```
+
+## EDA part
+
+...
+
+
+## quantize the over-speed feature and jam feature
+$$\ \text{Overspeed Rate =}\frac{\sum_{i}{I(s_i > 60)}}{m} \\$$
+$$\ \text{Jam Rate =}\frac{\sum_{i}{I(s_i = 0)}}{m} \\$$
+$$\  \text{m  is  the  number  of  cases  in  the  file.}  \\$$
+$$\ s_i  \text{  is  the  speed  of  the  }i_{th}\text{ case  in  the  file.} $$
+
+## 
+
+```{r}
+sum(mydata["SPEED"]>60)/nrow(mydata)
+```
+
+- The rate of vehicles’exceeding speed passing on this streets is 0.021%.
