@@ -89,13 +89,13 @@ for offset in range(0, limit, batch_size):
     pd.DataFrame.from_records(batch).to_csv("./data/"+str(offset/batch_size)+".csv")
 ```
 
-### powershell (not recommeded)
+### powershell
 
-note that this method will treat every field as a string
+substitute apptoken with your token
 
 ```powershell
 $url = "https://data.cityofnewyork.us/resource/i4gi-tjb9?`$limit=10"
-$apptoken = "2deBhYi6L7fwuHVpLccnXma3M"
+$apptoken = "apptoken"
 
 # Set header to accept JSON
 $headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
@@ -103,6 +103,21 @@ $headers.Add("Accept","application/json")
 $headers.Add("X-App-Token",$apptoken)
 
 $results = Invoke-RestMethod -Uri $url -Method get -Headers $headers
-$results | Export-Csv -Path "./data/results.csv" -NoTypeInformation -Encoding UTF8
+$csvContent = $results | ConvertTo-Csv -NoTypeInformation | ForEach-Object { $_ -replace '"', '' }
+$csvContent | Set-Content -Path "./data/results.csv" -Encoding UTF8
+```
+
+### bash
+
+substitute apptoken with your token
+
+```powershell
+#!/bin/bash
+
+url="https://data.cityofnewyork.us/resource/i4gi-tjb9?\$limit=10"
+apptoken="apptoken"
+
+curl -s -H "Accept: application/json" -H "X-App-Token: $apptoken" "$url" | \
+  jq -r '["id", "speed", "travel_time", "status", "data_as_of", "link_id", "link_points", "encoded_poly_line", "encoded_poly_line_lvls", "owner", "transcom_id", "borough", "link_n"], (.[] | [.id, .speed, .travel_time, .status, .data_as_of, .link_id, .link_points, .encoded_poly_line, .encoded_poly_line_lvls, .owner, .transcom_id, .borough, .link_n]) | @csv' > ./data/results.csv
 ```
 
