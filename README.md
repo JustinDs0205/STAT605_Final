@@ -17,3 +17,10 @@
 ## problem
 
 - identify anomalous traffic conditions through a systematic approach
+
+## update at 11.16
+
+- Data_Split.R: Split all files by link_id
+- data_analysis_v2.py: Calculate the overspeed_rate and jam_rate in parallel
+- summary_results.csv: output of data_analysis_v2.py, including 5 columns(LINK_ID, overspeed_rate, jam_rate, borough, link_name)
+- Visualization_v2.R: Visualization of overspeed_rate and jam_rate in shinyapp
