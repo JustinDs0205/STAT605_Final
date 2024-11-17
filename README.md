@@ -38,6 +38,6 @@
 - Reclean dataset: Delete Outliers where STATUS == -101,causing SPEED == 0 which influences the calculation of jam_rate.
   
 - Interesting point: The highest street is '11th ave n ganservoort - 12th ave @ 40th st', where
-- A policy may cause the traffic jam: https://www.cbsnews.com/newyork/news/traffic-hours-nyc-11th-avenue/
-- Topic about the jam in 11th Ave: https://www.reddit.com/r/upstate_new_york/comments/1e2jpy9/so_many_terrible_drivers_on_the_thruway/
+	- A policy may cause the traffic jam: https://www.cbsnews.com/newyork/news/traffic-hours-nyc-11th-avenue/
+	- Topic about the jam in 11th Ave: https://www.reddit.com/r/upstate_new_york/comments/1e2jpy9/so_many_terrible_drivers_on_the_thruway/
 
