@@ -33,5 +33,9 @@
 ## Check the visualization by shinyapp.io:
 - https://zdliu0205.shinyapps.io/visualization_v2/
 
+## update at 11.17
+
+- Reclean dataset: Delete Outliers where STATUS == -101,causing SPEED == 0 which influences the calculation of jam_rate.
+
 
 
