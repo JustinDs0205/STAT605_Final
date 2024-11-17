@@ -31,7 +31,8 @@
 <img width="1294" alt="image" src="https://github.com/user-attachments/assets/a632b776-0d7c-4a22-95c6-7797b4ec0d39">
 
 ## Check the visualization by shinyapp.io:
-- https://zdliu0205.shinyapps.io/visualization_v2/
+- https://zdliu0205.shinyapps.io/visualization_v2/ (old version)
+- https://zdliu0205.shinyapps.io/Visualization_v3/ (correct version)
 
 ## update at 11.17
 
