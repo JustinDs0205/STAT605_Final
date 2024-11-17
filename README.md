@@ -35,9 +35,17 @@
 
 ## update at 11.17
 
-- Reclean dataset: Delete Outliers where STATUS == -101,causing SPEED == 0 which influences the calculation of jam_rate.
+- data_cleaning.py: Reclean dataset -- Delete Outliers where STATUS == -101,causing SPEED == 0 which influences the calculation of jam_rate.
+	- After deleting outliers recalculate the overspeed_rate and jam_rate in parallel
+
+- data_analysis_v3.py : redefine the jam rate as (SPEED < 10)/m, reproduce the summary_results.csv
+
+- Visualization_v3.R: Visualization of overspeed_rate and jam_rate in shinyapp by new summary_results.csv
+        - https://zdliu0205.shinyapps.io/Visualization_v3/
   
 - Interesting point: The highest street is '11th ave n ganservoort - 12th ave @ 40th st', where
 	- A policy may cause the traffic jam: https://www.cbsnews.com/newyork/news/traffic-hours-nyc-11th-avenue/
 	- Topic about the jam in 11th Ave: https://www.reddit.com/r/upstate_new_york/comments/1e2jpy9/so_many_terrible_drivers_on_the_thruway/
+
+ 
 
