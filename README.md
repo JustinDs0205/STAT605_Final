@@ -30,5 +30,8 @@
 <img width="1288" alt="image" src="https://github.com/user-attachments/assets/59917146-ff19-42d0-9b1a-b96f8cc2a0ef">
 <img width="1294" alt="image" src="https://github.com/user-attachments/assets/a632b776-0d7c-4a22-95c6-7797b4ec0d39">
 
+## Check the visualization by shinyapp.io:
+- https://zdliu0205.shinyapps.io/visualization_v2/
+
 
 
