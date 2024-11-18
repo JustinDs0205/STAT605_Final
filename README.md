@@ -39,7 +39,7 @@
 - data_cleaning.py: Reclean dataset -- Delete Outliers where STATUS == -101,causing SPEED == 0 which influences the calculation of jam_rate.
 	- After deleting outliers recalculate the overspeed_rate and jam_rate in parallel
 
-- data_analysis_v3.py : redefine the jam rate as (SPEED < 10)/m, reproduce the summary_results.csv
+- data_analysis_v3.py : redefine the jam rate as I(SPEED < 10)/m, reproduce the summary_results.csv
 
 - Visualization_v3.R: Visualization of overspeed_rate and jam_rate in shinyapp by new summary_results.csv
         - https://zdliu0205.shinyapps.io/Visualization_v3/
