@@ -48,5 +48,17 @@
 	- A policy may cause the traffic jam: https://www.cbsnews.com/newyork/news/traffic-hours-nyc-11th-avenue/
 	- Topic about the jam in 11th Ave: https://www.reddit.com/r/upstate_new_york/comments/1e2jpy9/so_many_terrible_drivers_on_the_thruway/
 
+ ## update at 11.17 22:30pm
+
+ - Final Visualization: https://zdliu0205.shinyapps.io/street_map_visualization_try/
+
+ - Street_map_visualization_try.R: main script of street_map_visualization
+
+ - shinyapp_start.R: Start to compile the street_map_visualization_try.R
+
+ - Some data_cleaning scripts: I will add comments later lol
+
+<img width="1505" alt="image" src="https://github.com/user-attachments/assets/0fb67cbc-03ed-4979-9255-bb01d78438f5">
+
  
 
