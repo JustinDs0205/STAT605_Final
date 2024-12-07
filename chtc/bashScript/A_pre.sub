@@ -1,0 +1,18 @@
+universe = local
+#executable = /bin/true
+executable = ./A_pre.sh
+
+log    =    log/Apre_$(Cluster).log
+error  =  error/Apre_$(Cluster).err
+output = output/Apre_$(Cluster).out
+
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT_OR_EVICT
+transfer_input_files = DOT_Traffic_Speeds_NBE.csv
+transfer_output_files = split_ID
+
+request_cpus = 1
+request_memory = 200MB
+request_disk = 40GB
+
+queue

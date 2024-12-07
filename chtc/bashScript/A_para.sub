@@ -1,0 +1,20 @@
+log    =    log/A_$(Cluster).log
+error  =  error/A_$(Cluster).err
+output = output/A_$(Cluster).out
+
+executable = ./A_filePara.sh
+arguments = $(param)
+
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT_OR_EVICT
+
+# transfer_input_files = ./A_filePara.sh, $(param), A_List
+transfer_input_files = ./A_filePara.sh, A_List, split_ID
+transfer_output_files = split_ID
+# summary_results.csv
+
+request_cpus = 1
+request_memory = 200MB
+request_disk = 200MB 
+
+queue param from A_List

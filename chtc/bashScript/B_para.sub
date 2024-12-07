@@ -1,0 +1,18 @@
+log    =    log/B_$(Cluster).log
+error  =  error/B_$(Cluster).err
+output = output/B_$(Cluster).out
+
+executable = ./B_filePara.sh
+arguments = $(param) # Each param is passed here
+
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+transfer_input_files = B_filePara.sh, $(param), split_month
+
+request_cpus = 1
+request_memory = 1GB
+request_disk = 40GB
+
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+queue param from B_List

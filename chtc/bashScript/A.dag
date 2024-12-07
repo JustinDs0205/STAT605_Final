@@ -1,0 +1,15 @@
+# Define jobs
+# JOB 1 noop.sub NOOP
+JOB 1 A_pre.sub
+JOB 2 A_para.sub
+
+# Attach Scripts to NOOP Nodes
+# SCRIPT PRE 1 A_fileSplit.sh
+# SCRIPT POST 1 A_getList.sh
+# SCRIPT PRE 1 getKdata.sh
+# SCRIPT PRE 2 A_ls.sh
+SCRIPT POST 2 A_merge.sh
+
+# Define the dependency
+PARENT 1 CHILD 2
+

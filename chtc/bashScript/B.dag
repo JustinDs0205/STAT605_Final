@@ -1,0 +1,10 @@
+# Define jobs
+JOB 1 noop.sub NOOP
+JOB 2 B_para.sub
+
+# Attach Scripts to NOOP Nodes
+SCRIPT PRE 1 B_fileSplit.sh
+SCRIPT POST 1 B_getList.sh
+
+# Define the dependency
+PARENT 1 CHILD 2
