@@ -1,0 +1,24 @@
+# Before running this with "condor_submit myscript.sub", the
+# directories log, error, and output must exist.
+
+log    =    log/$(Cluster).log
+error  =  error/$(Cluster).err
+output = output/$(Cluster).out
+
+# An Apptainer container_image below provides a software environment
+# on the execute computer(s). This one provides R and Rscript along
+# with the tidyverse and FITSio packages.
+#container_image = osdf:///ospool/uc-shared/public/OSG-Staff/xalim_stat/R_tidyverse_FITSio.sif
+#container_image = file:///staging/jgillett/tidyverse_and_FITSio.sif
+
+executable = ./getKdata.sh
+
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+transfer_input_files = getKdata.sh
+transfer_output_files = DOT_Traffic_Speeds_NBE.csv
+
+request_cpus = 1
+request_memory = 1GB
+request_disk = 40GB
+
