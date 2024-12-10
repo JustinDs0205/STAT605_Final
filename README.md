@@ -60,5 +60,21 @@
 
 <img width="1505" alt="image" src="https://github.com/user-attachments/assets/0fb67cbc-03ed-4979-9255-bb01d78438f5">
 
+## update at 12.10
+
+- updata our new slides
+
+- add the cluster method with K-means,overspeed rate and jam rate were used for cluster analysis of different link_name to 
+find out the road sections with similar traffic patterns. 
+
+- <img width="569" alt="image" src="https://github.com/user-attachments/assets/08246fd9-befc-4bda-9fe2-faaf637f7493">
+- <img width="362" alt="image" src="https://github.com/user-attachments/assets/80373998-ddff-41ae-8cf9-f4bea5d5f702">
+
+- Example: Validation of Data Analysis: Traffic Jam on 11th Avenue
+
+
+
+
+
  
 
