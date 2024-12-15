@@ -72,8 +72,14 @@ find out the road sections with similar traffic patterns.
 
 - Example: Validation of Data Analysis: Traffic Jam on 11th Avenue
 
+## update at 12.15
 
+- update our report
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Thank for every group members: Eva Song, Jingwei Zhang, Shengyao Ye, Tianle Qiu, Zhengda Liu. Nice work from everyone! 
+And also thank for Prof John and TA Mei.
 
 
  
